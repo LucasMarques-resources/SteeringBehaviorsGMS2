@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"sObject","path":"sprites/sObject/sObject.yy",},"order":0,},
+    {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},"order":1,},
     {"id":{"name":"oObject","path":"objects/oObject/oObject.yy",},"order":0,},
     {"id":{"name":"scrVectorScript","path":"scripts/scrVectorScript/scrVectorScript.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
