@@ -1,4 +1,4 @@
-# Steering-Behaviours
+# Steering-Behaviors
 Project to learn steering behaviours in gms2
 
 Following SamSpadeGameDev tutorial
