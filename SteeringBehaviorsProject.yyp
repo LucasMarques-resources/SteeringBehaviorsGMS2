@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"sShip","path":"sprites/sShip/sShip.yy",},"order":0,},
     {"id":{"name":"oPursueEvade","path":"objects/oPursueEvade/oPursueEvade.yy",},"order":3,},
+    {"id":{"name":"oSeeker","path":"objects/oSeeker/oSeeker.yy",},"order":5,},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},"order":1,},
     {"id":{"name":"scrSteeringBehaviours","path":"scripts/scrSteeringBehaviours/scrSteeringBehaviours.yy",},"order":1,},
     {"id":{"name":"sObject","path":"sprites/sObject/sObject.yy",},"order":1,},
