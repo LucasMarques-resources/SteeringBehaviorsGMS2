@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sObject",
-    "path": "sprites/sObject/sObject.yy",
+    "name": "sShip",
+    "path": "sprites/sShip/sShip.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,7 +33,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oObject",
+  "name": "oSeekFlee",
   "tags": [],
   "resourceType": "GMObject",
 }

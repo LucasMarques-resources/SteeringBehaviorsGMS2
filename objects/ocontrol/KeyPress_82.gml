@@ -1,5 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-global.debugMode = false;
-global.changeSteeringBehaviour = false;
+game_restart();
