@@ -1,12 +1,16 @@
 {
   "resources": [
+    {"id":{"name":"oPursue","path":"objects/oPursue/oPursue.yy",},"order":0,},
     {"id":{"name":"sShip","path":"sprites/sShip/sShip.yy",},"order":0,},
     {"id":{"name":"oPursueEvade","path":"objects/oPursueEvade/oPursueEvade.yy",},"order":3,},
+    {"id":{"name":"oSeek","path":"objects/oSeek/oSeek.yy",},"order":1,},
+    {"id":{"name":"r_Pursue_Bouncing_Ball","path":"rooms/r_Pursue_Bouncing_Ball/r_Pursue_Bouncing_Ball.yy",},"order":2,},
     {"id":{"name":"oSeeker","path":"objects/oSeeker/oSeeker.yy",},"order":5,},
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},"order":1,},
     {"id":{"name":"scrSteeringBehaviours","path":"scripts/scrSteeringBehaviours/scrSteeringBehaviours.yy",},"order":1,},
     {"id":{"name":"sObject","path":"sprites/sObject/sObject.yy",},"order":1,},
     {"id":{"name":"oSeekFlee","path":"objects/oSeekFlee/oSeekFlee.yy",},"order":0,},
+    {"id":{"name":"oTarget","path":"objects/oTarget/oTarget.yy",},"order":4,},
     {"id":{"name":"scrVectorScript","path":"scripts/scrVectorScript/scrVectorScript.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
@@ -25,6 +29,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"r_Pursue_Bouncing_Ball","path":"rooms/r_Pursue_Bouncing_Ball/r_Pursue_Bouncing_Ball.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -41,6 +46,7 @@
     {"folderPath":"folders/Animation Curves.yy","order":12,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Notes.yy","order":13,"resourceVersion":"1.0","name":"Notes","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Tests.yy","order":11,"resourceVersion":"1.0","name":"Tests","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -50,7 +56,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.5.0.8",
+    "IDEVersion": "2022.5.1.16",
   },
   "resourceVersion": "1.5",
   "name": "SteeringBehaviorsProject",

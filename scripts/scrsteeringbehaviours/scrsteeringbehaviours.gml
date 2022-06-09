@@ -26,8 +26,9 @@ function pursue_force(_inst)
 {
 	var _vec = vector_copy(_inst.velocity);
 	// Get the future position
-	_vec.multiply(30);
+	_vec.multiply(20);
 	_vec.add(_inst.position);
+	draw_line(_inst.x, _inst.y, _vec.x, _vec.y);
 	return seek_force(_vec.x, _vec.y);
 }
 
@@ -35,7 +36,7 @@ function evade_force(_inst)
 {
 	var _vec = vector_copy(_inst.velocity);
 	// Get the future position
-	_vec.multiply(30);
+	_vec.multiply(20);
 	_vec.add(_inst.position);
 	return flee_force(_vec.x, _vec.y);
 }
