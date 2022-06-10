@@ -28,7 +28,10 @@ function pursue_force(_inst)
 	// Get the future position
 	_vec.multiply(20);
 	_vec.add(_inst.position);
+	
+	// Debug
 	draw_line(_inst.x, _inst.y, _vec.x, _vec.y);
+	
 	return seek_force(_vec.x, _vec.y);
 }
 
@@ -55,5 +58,17 @@ function arrive_force(_x, _y, _slowing_radius)
 	}
 	_vec.subtract(velocity);
 	_vec.limit_magnitude(max_force);
+	return _vec;
+}
+
+function wander_force()
+{
+	var _vec = vector_copy(velocity);
+	_vec.set_magnitude(wander_distance);
+	_vec.add(new vector_lengthdir(wander_power, image_angle + wander_angle));
+	_vec.limit_magnitude(max_force);
+	
+	wander_angle += random_range(-wander_change, wander_change);
+	
 	return _vec;
 }

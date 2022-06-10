@@ -1,11 +1,8 @@
 /// @description Insert description here
-// You can write your code in this 
+// You can write your code in this
 
 // Add to the variable the steering force
-if (!global.changeSteeringBehaviour)
-	steering_force.add(pursue_force(oSeekFlee));
-else
-	steering_force.add(evade_force(oSeekFlee));
+steering_force.add(wander_force());
 
 // Update the vectors
 velocity.add(steering_force);
@@ -18,3 +15,5 @@ steering_force.set(0, 0);
 x += velocity.x;
 y += velocity.y;
 image_angle = velocity.get_direction();
+
+edge_wrap();

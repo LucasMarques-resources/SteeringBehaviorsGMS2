@@ -2,10 +2,7 @@
 // You can write your code in this 
 
 // Add to the variable the steering force
-if (!global.changeSteeringBehaviour)
-	steering_force.add(pursue_force(oSeekFlee));
-else
-	steering_force.add(evade_force(oSeekFlee));
+steering_force.add(arrive_force(mouse_x, mouse_y, 100));
 
 // Update the vectors
 velocity.add(steering_force);

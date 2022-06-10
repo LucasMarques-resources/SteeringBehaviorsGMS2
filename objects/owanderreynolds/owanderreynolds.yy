@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sShip",
-    "path": "sprites/sShip/sShip.yy",
+    "name": "sShipGreen",
+    "path": "sprites/sShipGreen/sShipGreen.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,7 +25,6 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oTarget","path":"objects/oTarget/oTarget.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -34,7 +33,7 @@
     "path": "folders/Objects/Vehicles.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPursue",
+  "name": "oWanderReynolds",
   "tags": [],
   "resourceType": "GMObject",
 }

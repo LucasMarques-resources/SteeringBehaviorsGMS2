@@ -119,3 +119,8 @@ function vector_subtract(_vector_a, _vector_b)
 {
 	return new vector((_vector_a.x - _vector_b.x), (_vector_a.y - _vector_b.y));
 }
+
+function vector_lengthdir(_length, _dir) : vector() constructor {
+    x = lengthdir_x(_length, _dir);
+    y = lengthdir_y(_length, _dir);
+}

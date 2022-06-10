@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 // Initialize variables
-dir = irandom_range(0, 359);
-spd = 3;
 position = new vector(x, y);
-velocity = new vector_lengthdir(spd, dir);
+velocity = new vector_random(3);
+steering_force = new vector(0, 0);
 
-image_blend = c_red;
+max_speed = 3;
+max_force = 0.1;

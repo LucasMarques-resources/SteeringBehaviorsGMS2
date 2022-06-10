@@ -1,11 +1,11 @@
 /// @description Insert description here
-// You can write your code in this 
+// You can write your code in this
+
+perlin_position += increment;
 
 // Add to the variable the steering force
-if (!global.changeSteeringBehaviour)
-	steering_force.add(pursue_force(oSeekFlee));
-else
-	steering_force.add(evade_force(oSeekFlee));
+var _angle = (perlin_noise(perlin_position) * wander_power) + image_angle;
+steering_force.add(new vector_lengthdir(max_force, _angle));
 
 // Update the vectors
 velocity.add(steering_force);
@@ -18,3 +18,5 @@ steering_force.set(0, 0);
 x += velocity.x;
 y += velocity.y;
 image_angle = velocity.get_direction();
+
+edge_wrap();
