@@ -1,6 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+function apply_force(_force, _weight = 1) {
+	_force.multiply(_weight);
+	steering_force.add(_force);
+}
+
 function seek_force(_x, _y)
 {
 	var _vec = new vector(_x, _y);
@@ -69,6 +74,94 @@ function wander_force()
 	_vec.limit_magnitude(max_force);
 	
 	wander_angle += random_range(-wander_change, wander_change);
+	
+	return _vec;
+}
+
+function align_force(_obj = object_index, _max_dist = 200)
+{
+	var _vec = new vector(0, 0);
+	var _count = 0;
+	
+	with (_obj)
+	{
+		// Make sure the vehicle doesn't count it self
+		// "continue" skips to the next instance
+		if (id == other.id)
+			continue;
+		
+		// Check if the vehicle is outside a certain radius
+		// If it is, skips to the next instance
+		if (point_distance(position.x, position.y, other.position.x, other.position.y) > _max_dist)
+			continue;
+		
+		_vec.add(velocity);
+		_count += 1;
+	}
+	
+	if (_count > 0)
+	{
+		_vec.set_magnitude(max_force);
+	}
+	
+	return _vec;
+}
+
+function cohesion_force(_obj = object_index, _max_dist = 200)
+{
+	var _vec = new vector(0, 0);
+	var _count = 0;
+	
+	with (_obj)
+	{
+		// Make sure the vehicle doesn't count it self
+		// "continue" skips to the next instance
+		if (id == other.id)
+			continue;
+		
+		if (point_distance(position.x, position.y, other.position.x, other.position.y) > _max_dist)
+			continue;
+		
+		_vec.add(position);
+		_count += 1;
+	}
+	
+	if (_count > 0)
+	{
+		_vec.divide(_count);
+		_vec = seek_force(_vec.x, _vec.y);
+	}
+	
+	return _vec;
+}
+
+function separation_force(_obj = object_index, _max_dist = 200)
+{
+	var _vec = new vector(0, 0);
+	var _count = 0;
+	var _vec_to;
+	
+	with (_obj)
+	{
+		if (id == other.id)
+			continue;
+		
+		if (point_distance(position.x, position.y, other.position.x, other.position.y) > _max_dist)
+			continue;
+		
+		_vec_to = vector_subtract(other.position, position);
+		
+		var _dist = min(_vec_to.get_magnitude(), 200);
+		var _scale = (1 - (_dist/200));
+		_vec_to.multiply(_scale);
+		_vec.add(_vec_to);
+		_count += 1;
+	}
+	
+	if (_count > 0)
+	{
+		_vec.set_magnitude(max_force);
+	}
 	
 	return _vec;
 }
