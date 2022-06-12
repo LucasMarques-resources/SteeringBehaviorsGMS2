@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"oSeparation","path":"objects/oSeparation/oSeparation.yy",},"order":10,},
+    {"id":{"name":"oFleeRadius","path":"objects/oFleeRadius/oFleeRadius.yy",},"order":12,},
     {"id":{"name":"oPursue","path":"objects/oPursue/oPursue.yy",},"order":1,},
     {"id":{"name":"sShip","path":"sprites/sShip/sShip.yy",},"order":0,},
     {"id":{"name":"r_Alignment","path":"rooms/r_Alignment/r_Alignment.yy",},"order":5,},
@@ -13,6 +14,7 @@
     {"id":{"name":"oSeek","path":"objects/oSeek/oSeek.yy",},"order":3,},
     {"id":{"name":"oFlocking","path":"objects/oFlocking/oFlocking.yy",},"order":11,},
     {"id":{"name":"r_Pursue_Bouncing_Ball","path":"rooms/r_Pursue_Bouncing_Ball/r_Pursue_Bouncing_Ball.yy",},"order":2,},
+    {"id":{"name":"sBall","path":"sprites/sBall/sBall.yy",},"order":6,},
     {"id":{"name":"r_Wander_Perlin_Noise","path":"rooms/r_Wander_Perlin_Noise/r_Wander_Perlin_Noise.yy",},"order":3,},
     {"id":{"name":"oArrive","path":"objects/oArrive/oArrive.yy",},"order":0,},
     {"id":{"name":"r_Wander_Reynolds","path":"rooms/r_Wander_Reynolds/r_Wander_Reynolds.yy",},"order":4,},
@@ -26,12 +28,12 @@
     {"id":{"name":"oWanderRandom","path":"objects/oWanderRandom/oWanderRandom.yy",},"order":5,},
     {"id":{"name":"scrPerlinNoise","path":"scripts/scrPerlinNoise/scrPerlinNoise.yy",},"order":3,},
     {"id":{"name":"oSeekFlee","path":"objects/oSeekFlee/oSeekFlee.yy",},"order":4,},
+    {"id":{"name":"r_Flee_Radius","path":"rooms/r_Flee_Radius/r_Flee_Radius.yy",},"order":9,},
     {"id":{"name":"sShipYellow","path":"sprites/sShipYellow/sShipYellow.yy",},"order":2,},
     {"id":{"name":"oWanderPerlinNoise","path":"objects/oWanderPerlinNoise/oWanderPerlinNoise.yy",},"order":6,},
     {"id":{"name":"oTarget","path":"objects/oTarget/oTarget.yy",},"order":5,},
     {"id":{"name":"scrVectorScript","path":"scripts/scrVectorScript/scrVectorScript.yy",},"order":0,},
     {"id":{"name":"oAlign","path":"objects/oAlign/oAlign.yy",},"order":8,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -47,14 +49,14 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"r_Flee_Radius","path":"rooms/r_Flee_Radius/r_Flee_Radius.yy",},},
+    {"roomId":{"name":"r_Wander_Reynolds","path":"rooms/r_Wander_Reynolds/r_Wander_Reynolds.yy",},},
     {"roomId":{"name":"r_Flocking","path":"rooms/r_Flocking/r_Flocking.yy",},},
     {"roomId":{"name":"r_Separation","path":"rooms/r_Separation/r_Separation.yy",},},
     {"roomId":{"name":"r_Alignment","path":"rooms/r_Alignment/r_Alignment.yy",},},
     {"roomId":{"name":"r_Cohesion_Wander","path":"rooms/r_Cohesion_Wander/r_Cohesion_Wander.yy",},},
     {"roomId":{"name":"r_Pursue_Bouncing_Ball","path":"rooms/r_Pursue_Bouncing_Ball/r_Pursue_Bouncing_Ball.yy",},},
-    {"roomId":{"name":"r_Wander_Reynolds","path":"rooms/r_Wander_Reynolds/r_Wander_Reynolds.yy",},},
     {"roomId":{"name":"r_Wander_Perlin_Noise","path":"rooms/r_Wander_Perlin_Noise/r_Wander_Perlin_Noise.yy",},},
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

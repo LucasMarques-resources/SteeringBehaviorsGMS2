@@ -27,6 +27,33 @@ function flee_force(_x, _y)
 	return _vec;
 }
 
+function flee_force_radius(_x, _y, _radius, _slow_down_amount)
+{
+	var _vec = new vector(_x, _y);
+	_vec.subtract(position);
+	if (_vec.get_magnitude() < _radius)
+	{
+		_vec.set_magnitude(max_speed);
+		_vec.negate();
+		_vec.subtract(velocity);
+		_vec.limit_magnitude(max_force);
+		//show_debug_message("IN");
+		return _vec;
+	}
+	else
+	{
+		//show_debug_message("OUT");
+		slow_down(_slow_down_amount);
+		return new vector(0, 0);
+	}
+}
+
+function slow_down(_amount)
+{
+	velocity.x = lerp(velocity.x, 0, _amount);
+	velocity.y = lerp(velocity.y, 0, _amount);
+}
+
 function pursue_force(_inst)
 {
 	var _vec = vector_copy(_inst.velocity);
@@ -35,7 +62,7 @@ function pursue_force(_inst)
 	_vec.add(_inst.position);
 	
 	// Debug
-	draw_line(_inst.x, _inst.y, _vec.x, _vec.y);
+	//draw_line(_inst.x, _inst.y, _vec.x, _vec.y);
 	
 	return seek_force(_vec.x, _vec.y);
 }

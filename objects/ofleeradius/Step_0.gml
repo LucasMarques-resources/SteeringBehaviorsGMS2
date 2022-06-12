@@ -2,9 +2,8 @@
 // You can write your code in this 
 
 // Add to the variable the steering force
-apply_force(align_force(object_index, 300));
-apply_force(cohesion_force(object_index, 400));
-apply_force(separation_force(object_index, 100));
+apply_force(flee_force_radius(mouse_x, mouse_y, 150, 0.03));
+apply_force(separation_force(object_index, 30));
 
 // Update the vectors
 velocity.add(steering_force);
