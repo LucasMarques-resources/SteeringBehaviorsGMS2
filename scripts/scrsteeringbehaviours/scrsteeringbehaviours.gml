@@ -192,3 +192,29 @@ function separation_force(_obj = object_index, _max_dist = 200)
 	
 	return _vec;
 }
+
+function path_following(_start, _end, _radius)
+{
+	var _future = vector_copy(velocity);
+	// Get the future position
+	_future.multiply(20);
+	_future.add(position);
+	
+	var _target = findProjection(_start, _future, _end);
+	
+	if (global.debugMode)
+	{
+		draw_circle_color(_future.x, _future.y, 5, c_red, c_red, false);
+		draw_circle_color(_target.x, _target.y, 5, c_green, c_green, false);
+	}
+	
+	var _dist = point_distance(_future.x, _future.y, _target.x, _target.y);
+	//show_debug_message("dist " + string(_dist));
+	//show_debug_message("radius " + string(_radius));
+	if (_dist > _radius)
+	{
+		return seek_force(_target.x, _target.y);
+	}
+	else
+		return new vector(0, 0);
+}
