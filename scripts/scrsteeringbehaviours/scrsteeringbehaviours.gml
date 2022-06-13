@@ -201,11 +201,16 @@ function path_following(_start, _end, _radius)
 	_future.add(position);
 	
 	var _target = findProjection(_start, _future, _end);
+	var _target_future = vector_copy(_target);
+	var _ahead = vector_subtract(end_path, start_path);
+	_ahead.set_magnitude(30);
+	_target_future.add(_ahead);
 	
 	if (global.debugMode)
 	{
 		draw_circle_color(_future.x, _future.y, 5, c_red, c_red, false);
 		draw_circle_color(_target.x, _target.y, 5, c_green, c_green, false);
+		draw_circle_color(_target_future.x, _target_future.y, 5, c_blue, c_blue, false);
 	}
 	
 	var _dist = point_distance(_future.x, _future.y, _target.x, _target.y);
@@ -213,7 +218,7 @@ function path_following(_start, _end, _radius)
 	//show_debug_message("radius " + string(_radius));
 	if (_dist > _radius)
 	{
-		return seek_force(_target.x, _target.y);
+		return seek_force(_target_future.x, _target_future.y);
 	}
 	else
 		return new vector(0, 0);
