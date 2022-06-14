@@ -5,6 +5,7 @@
     {"id":{"name":"oPursue","path":"objects/oPursue/oPursue.yy",},"order":1,},
     {"id":{"name":"sShip","path":"sprites/sShip/sShip.yy",},"order":0,},
     {"id":{"name":"r_Alignment","path":"rooms/r_Alignment/r_Alignment.yy",},"order":5,},
+    {"id":{"name":"r_Paths_Following","path":"rooms/r_Paths_Following/r_Paths_Following.yy",},"order":11,},
     {"id":{"name":"oPursueEvade","path":"objects/oPursueEvade/oPursueEvade.yy",},"order":2,},
     {"id":{"name":"sShipGreen","path":"sprites/sShipGreen/sShipGreen.yy",},"order":4,},
     {"id":{"name":"sShipRed","path":"sprites/sShipRed/sShipRed.yy",},"order":3,},
@@ -21,6 +22,7 @@
     {"id":{"name":"oControl","path":"objects/oControl/oControl.yy",},"order":1,},
     {"id":{"name":"scrSteeringBehaviours","path":"scripts/scrSteeringBehaviours/scrSteeringBehaviours.yy",},"order":1,},
     {"id":{"name":"oWanderReynolds","path":"objects/oWanderReynolds/oWanderReynolds.yy",},"order":7,},
+    {"id":{"name":"oPathsFollowing","path":"objects/oPathsFollowing/oPathsFollowing.yy",},"order":14,},
     {"id":{"name":"r_Cohesion_Wander","path":"rooms/r_Cohesion_Wander/r_Cohesion_Wander.yy",},"order":6,},
     {"id":{"name":"r_Path_Following","path":"rooms/r_Path_Following/r_Path_Following.yy",},"order":10,},
     {"id":{"name":"r_Separation","path":"rooms/r_Separation/r_Separation.yy",},"order":7,},
@@ -51,6 +53,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"r_Paths_Following","path":"rooms/r_Paths_Following/r_Paths_Following.yy",},},
     {"roomId":{"name":"r_Path_Following","path":"rooms/r_Path_Following/r_Path_Following.yy",},},
     {"roomId":{"name":"r_Flee_Radius","path":"rooms/r_Flee_Radius/r_Flee_Radius.yy",},},
     {"roomId":{"name":"r_Wander_Reynolds","path":"rooms/r_Wander_Reynolds/r_Wander_Reynolds.yy",},},

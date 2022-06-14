@@ -223,3 +223,42 @@ function path_following(_start, _end, _radius)
 	else
 		return new vector(0, 0);
 }
+
+function paths_following(_start, _end, _radius)
+{
+	var _future = vector_copy(velocity);
+	// Get the future position
+	_future.multiply(20);
+	_future.add(position);
+	
+	var _target = findProjection(_start, _future, _end);
+	var _target_future = vector_copy(_target);
+	var _ahead = vector_subtract(_end, _start);
+	_ahead.set_magnitude(30);
+	_target_future.add(_ahead);
+	
+	if (point_distance(_target.x, _target.y, _end.x, _end.y) < 5)
+	{	
+		if (current_path < array_length(paths) - 1)
+			current_path += 1;
+		else
+			current_path = 0;
+	}
+		
+	if (global.debugMode)
+	{
+		draw_line(position.x, position.y, _future.x, _future.y);
+		draw_line(_future.x, _future.y, _target.x, _target.y);
+		draw_circle_color(_future.x, _future.y, 5, c_red, c_red, false);
+		draw_circle_color(_target.x, _target.y, 5, c_green, c_green, false);
+		draw_circle_color(_target_future.x, _target_future.y, 5, c_blue, c_blue, false);
+	}
+	
+	var _dist = point_distance(_future.x, _future.y, _target.x, _target.y);
+	if (_dist > _radius)
+	{
+		return seek_force(_target_future.x, _target_future.y);
+	}
+	else
+		return new vector(0, 0);
+}
