@@ -224,6 +224,8 @@ function path_following(_start, _end, _radius)
 		return new vector(0, 0);
 }
 
+// Path following with different paths
+// In a bad and tricky way
 function paths_following(_start, _end, _radius)
 {
 	var _future = vector_copy(velocity);

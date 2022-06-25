@@ -13,8 +13,6 @@ function findProjection(_start, _future, _end)
 	return _vecB;
 }
 
-//end_path.y = mouse_y;
-
 // Update the vectors
 velocity.add(steering_force);
 velocity.limit_magnitude(max_speed);

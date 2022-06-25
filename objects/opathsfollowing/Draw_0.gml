@@ -5,7 +5,6 @@ draw_self();
 
 for (var i = 0; i < array_length(paths); i++)
 {
-	//for (var j = 0; j < array_length(paths[i]); j++)
 	var _start_path = new vector(paths[i][0], paths[i][1]);
 	var _end_path = new vector(paths[i][2], paths[i][3]);
 	draw_line(_start_path.x, _start_path.y, _end_path.x, _end_path.y);
