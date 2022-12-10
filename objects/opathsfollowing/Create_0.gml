@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// THIS CODE SUCKS
+
 // Initialize variables
 position = new vector(x, y);
 velocity = new vector(3, 0);

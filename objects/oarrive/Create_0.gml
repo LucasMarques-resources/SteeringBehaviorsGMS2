@@ -7,4 +7,4 @@ velocity = new vector(0, 0);
 steering_force = new vector(0, 0);
 
 max_speed = 3;
-max_force = 0.1;
+max_force = 0.05;
